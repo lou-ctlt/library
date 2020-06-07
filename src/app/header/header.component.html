@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark bg-dark">
+    <ul class="navbar nav">
+        <li>
+            <a class="nav-item nav-link" routerLink="books">Livres</a>
+        </li>
+        <li>
+            <a class="nav-item nav-link" routerLink="auth/signup" *ngIf="!isAuth">S'inscrire</a>
+        </li>
+        <li>
+            <a class="nav-item nav-link" routerLink="auth/signin" *ngIf="!isAuth">Se connecter</a>
+        </li>
+        <li>
+            <a (click)="onSignOut()"
+                style="cursor: pointer;"
+                *ngIf="isAuth">Déconnexion</a>
+        </li>
+    </ul>
+</nav>
+
